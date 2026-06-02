@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://biyycfd4rk4k2"]
 
+[ext_resource type="Script" uid="uid://bhmdrowlbjrot" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://dc3qssosc7wrm" path="res://scenes/jogador.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://d2nt2lx4ldxod" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://138ucf3goaxo" path="res://scenes/plataforma.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://0c4r8dn6fcrm" path="res://scenes/moeda.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dxcdqsj6k6ujl" path="res://scenes/kill_zone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://doqdfk2b2qrt7" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://dmss8ea041y40" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -217,6 +219,10 @@ distance = 16.0
 
 [node name="game" type="Node2D" unique_id=911398790]
 
+[node name="GameManager" type="Node" parent="." unique_id=211072705]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=118595613]
 tile_set = SubResource("TileSet_lbhrr")
 format = 2
@@ -293,3 +299,14 @@ position = Vector2(1846, 1)
 
 [node name="slime3" parent="slimes" unique_id=213966086 instance=ExtResource("6_p57ef")]
 position = Vector2(168, 32)
+
+[node name="Textos" type="Node" parent="." unique_id=959334788]
+
+[node name="Label" type="Label" parent="Textos" unique_id=1299861974]
+offset_left = 11.0
+offset_top = -44.0
+offset_right = 193.0
+offset_bottom = -24.0
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 16
+text = "me ajuda vitor"
