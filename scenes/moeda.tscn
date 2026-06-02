@@ -100,11 +100,15 @@ radius = 4.1231055
 
 [node name="moeda" type="Area2D" unique_id=852775661]
 position = Vector2(-5, -19)
+collision_mask = 2
 script = ExtResource("1_188lh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2125155959]
 sprite_frames = SubResource("SpriteFrames_urlmb")
+autoplay = "default"
 frame_progress = 0.70916283
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849861939]
 shape = SubResource("CircleShape2D_lsehd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
