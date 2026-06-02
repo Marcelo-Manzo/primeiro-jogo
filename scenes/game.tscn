@@ -223,6 +223,13 @@ distance = 16.0
 unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=150983129]
+offset_left = 319.0
+offset_top = -102.0
+offset_right = 474.0
+offset_bottom = -74.0
+text = "Voce Tem X moedas"
+
 [node name="TileMap" type="TileMap" parent="." unique_id=118595613]
 tile_set = SubResource("TileSet_lbhrr")
 format = 2
