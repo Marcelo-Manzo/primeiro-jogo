@@ -288,6 +288,12 @@ position = Vector2(1846, 1)
 [node name="slime3" parent="slimes" unique_id=213966086 instance=ExtResource("6_p57ef")]
 position = Vector2(168, 32)
 
+[node name="slime4" parent="slimes" unique_id=1424232860 instance=ExtResource("6_p57ef")]
+position = Vector2(1688, -1)
+
+[node name="slime5" parent="slimes" unique_id=531536997 instance=ExtResource("6_p57ef")]
+position = Vector2(1559, 0)
+
 [node name="Textos" type="Node" parent="." unique_id=959334788]
 
 [node name="Label" type="Label" parent="Textos" unique_id=1299861974]
@@ -299,19 +305,13 @@ theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 16
 text = "me ajuda vitor"
 
-[node name="slime" parent="." unique_id=1424232860 instance=ExtResource("6_p57ef")]
-position = Vector2(1688, -1)
-
-[node name="slime2" parent="." unique_id=531536997 instance=ExtResource("6_p57ef")]
-position = Vector2(1559, 0)
-
 [connection signal="body_entered" from="TileMap/coins/moeda" to="TileMap/coins/moeda" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61802" to="TileMap/coins/@Area2D@61802" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61803" to="TileMap/coins/@Area2D@61803" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61804" to="TileMap/coins/@Area2D@61804" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61805" to="TileMap/coins/@Area2D@61805" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61806" to="TileMap/coins/@Area2D@61806" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61807" to="TileMap/coins/@Area2D@61807" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61808" to="TileMap/coins/@Area2D@61808" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61809" to="TileMap/coins/@Area2D@61809" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@61810" to="TileMap/coins/@Area2D@61810" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84625" to="TileMap/coins/@Area2D@84625" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84626" to="TileMap/coins/@Area2D@84626" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84627" to="TileMap/coins/@Area2D@84627" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84628" to="TileMap/coins/@Area2D@84628" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84629" to="TileMap/coins/@Area2D@84629" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84630" to="TileMap/coins/@Area2D@84630" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84631" to="TileMap/coins/@Area2D@84631" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84632" to="TileMap/coins/@Area2D@84632" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@84633" to="TileMap/coins/@Area2D@84633" method="_on_body_entered"]
