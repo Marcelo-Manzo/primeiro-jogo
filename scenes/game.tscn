@@ -224,17 +224,6 @@ distance = 16.0
 
 [node name="game" type="Node2D" unique_id=911398790]
 
-[node name="GameManager" type="Node" parent="." unique_id=211072705]
-unique_name_in_owner = true
-script = ExtResource("1_gee14")
-
-[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=150983129]
-offset_left = 319.0
-offset_top = -102.0
-offset_right = 474.0
-offset_bottom = -74.0
-text = "Voce Tem X moedas"
-
 [node name="TileMap" type="Node" parent="." unique_id=1179324931]
 
 [node name="background" type="TileMapLayer" parent="TileMap" unique_id=214293825]
@@ -250,6 +239,17 @@ tile_set = SubResource("TileSet_lbhrr")
 [node name="coins" type="TileMapLayer" parent="TileMap" unique_id=1224419686]
 tile_map_data = PackedByteArray("AAADAAEAAAAAAAAAAQAEAAEAAAAAAAAAAQAhAPz/AAAAAAAAAQAoAPz/AAAAAAAAAQAvAP3/AAAAAAAAAQAzAP7/AAAAAAAAAQA3APr/AAAAAAAAAQBHAPv/AAAAAAAAAQBLAPr/AAAAAAAAAQBtAP3/AAAAAAAAAQA=")
 tile_set = SubResource("TileSet_0tnpc")
+
+[node name="GameManager" type="Node" parent="." unique_id=211072705]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=150983129]
+offset_left = 319.0
+offset_top = -102.0
+offset_right = 474.0
+offset_bottom = -74.0
+text = "Voce Tem X moedas"
 
 [node name="jogador" parent="." unique_id=766170693 instance=ExtResource("1_uwrxv")]
 position = Vector2(14, 34)
@@ -306,12 +306,12 @@ position = Vector2(1688, -1)
 position = Vector2(1559, 0)
 
 [connection signal="body_entered" from="TileMap/coins/moeda" to="TileMap/coins/moeda" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44396" to="TileMap/coins/@Area2D@44396" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44397" to="TileMap/coins/@Area2D@44397" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44398" to="TileMap/coins/@Area2D@44398" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44399" to="TileMap/coins/@Area2D@44399" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44400" to="TileMap/coins/@Area2D@44400" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44401" to="TileMap/coins/@Area2D@44401" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44402" to="TileMap/coins/@Area2D@44402" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44403" to="TileMap/coins/@Area2D@44403" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/coins/@Area2D@44404" to="TileMap/coins/@Area2D@44404" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61802" to="TileMap/coins/@Area2D@61802" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61803" to="TileMap/coins/@Area2D@61803" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61804" to="TileMap/coins/@Area2D@61804" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61805" to="TileMap/coins/@Area2D@61805" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61806" to="TileMap/coins/@Area2D@61806" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61807" to="TileMap/coins/@Area2D@61807" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61808" to="TileMap/coins/@Area2D@61808" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61809" to="TileMap/coins/@Area2D@61809" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/coins/@Area2D@61810" to="TileMap/coins/@Area2D@61810" method="_on_body_entered"]
