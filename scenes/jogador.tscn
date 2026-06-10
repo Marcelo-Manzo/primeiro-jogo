@@ -3,6 +3,38 @@
 [ext_resource type="Script" uid="uid://dgyjwwaalbs7n" path="res://scripts/jogador.gd" id="1_uahlj"]
 [ext_resource type="Texture2D" uid="uid://uamlijq4aqoa" path="res://assets/sprites/knight.png" id="1_vwxko"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lymcn"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obj1g"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ouku"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw1o0"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqsc"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxhjy"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7dxu"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(192, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyaju"]
+atlas = ExtResource("1_vwxko")
+region = Rect2(224, 160, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_uahlj"]
 atlas = ExtResource("1_vwxko")
 region = Rect2(0, 0, 32, 32)
@@ -91,6 +123,35 @@ region = Rect2(224, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lymcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obj1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ouku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw1o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbqsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxhjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7dxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyaju")
+}],
+"loop": false,
+"name": &"dash",
+"speed": 28.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_uahlj")
 }, {
 "duration": 1.0,
@@ -112,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -179,9 +240,18 @@ script = ExtResource("1_uahlj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=653951451]
 position = Vector2(1, -13)
 sprite_frames = SubResource("SpriteFrames_32758")
-animation = &"jump"
+animation = &"dash"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36868959]
 position = Vector2(1, -7)
 shape = SubResource("CircleShape2D_lj65x")
+
+[node name="DashTimer" type="Timer" parent="." unique_id=1531811166]
+wait_time = 0.25
+
+[node name="DashCooldownTimer" type="Timer" parent="." unique_id=915256500]
+wait_time = 0.5
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="DashCooldownTimer" to="." method="_on_dash_cooldown_timer_timeout"]
